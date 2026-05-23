@@ -1,4 +1,5 @@
 Details view of Kube Architect…….
+
 A user kubectl send request to create POD from worker node.
 First the API server will receive request for POD creation, it will validate and authenticate.
 APIserver will send messages to ETCD for entry
@@ -39,6 +40,7 @@ Horizontal Pod Autoscaler (HPA):
 
 
 **Control Plane (Master Node Components)**
+
 **API Server**
 This is the "front desk" of Kubernetes. Whenever you want to interact with your cluster, your request goes through the API Server. It validates and processes these requests to the backend components.
 
@@ -65,18 +67,18 @@ Think of this as the "traffic cop" for network communication either between Pods
 This is the software used to run containers. Docker is commonly used, but other runtimes like containerd can also be used.
 
 **Other Components**
-Pod
+**Pod**
 The smallest unit in Kubernetes, a Pod is a group of one or more containers. Think of it like an apartment in an apartment building.
 
-Service
+**Service**
 This is like a phone directory for Pods. Since Pods can come and go, a Service provides a stable "address" so that other parts of your application can find them.
 
-Volume
+**Volume**
 This is like an external hard-drive that can be attached to a Pod to store data.
 
-Namespace
+**Namespace**
 A way to divide cluster resources among multiple users or teams. Think of it as having different folders on a shared computer, where each team can only see their own folder.
 
-Ingress
+**Ingress**
 Think of this as the "front door" for external access to your applications, controlling how HTTP and HTTPS traffic should be routed to your services.
 
