@@ -89,13 +89,39 @@ In this example, the service has the IP address 10.109.128.34. You can now conne
 
 To check, use kubectl exec to curl the IP address from inside one of your NGINX Pods:
 
-$ kubectl exec deployment/nginx -- curl 10.109.128.34:8080
+$ root@kubernetes:~/cluster# kubectl exec deployment/nginx -- curl 10.96.247.171:8080
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!DOCTYPE html>
+100   896  100   896    0     0   592k      0 --:--:-- --:--:-- --:--:--  875k
+<!DOCTYPE html>
 <html>
 <head>
 <title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, nginx is successfully installed and working.
+Further configuration is required for the web server, reverse proxy,
+API gateway, load balancer, content cache, or other features.</p>
+
+<p>For online documentation and support please refer to
+<a href="https://nginx.org/">nginx.org</a>.<br/>
+To engage with the community please visit
+<a href="https://community.nginx.org/">community.nginx.org</a>.<br/>
+For enterprise grade support, professional services, additional
+security features and capabilities please refer to
+<a href="https://f5.com/nginx">f5.com/nginx</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+root@kubernetes:~/cluster#
+
 You got a successful response, proving the Service is working. You can also try connecting using the Service’s DNS name, such as nginx-clusterip.default.svc.cluster.local. Whichever method you use, port 8080 must be specified, as that’s the port the Service is configured to listen on.
 
 3. Create a NodePort Service
@@ -128,11 +154,36 @@ In this demo, we’re using a local Minikube cluster with no external IP address
 
 Accessing port 32000 on your Node’s IP address should now connect you to your NGINX deployment:
 
-$ curl 192.168.49.2:32000
+$ oot@kubernetes:~/cluster# curl 172.18.0.2:32000
 <!DOCTYPE html>
 <html>
 <head>
 <title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, nginx is successfully installed and working.
+Further configuration is required for the web server, reverse proxy,
+API gateway, load balancer, content cache, or other features.</p>
+
+<p>For online documentation and support please refer to
+<a href="https://nginx.org/">nginx.org</a>.<br/>
+To engage with the community please visit
+<a href="https://community.nginx.org/">community.nginx.org</a>.<br/>
+For enterprise grade support, professional services, additional
+security features and capabilities please refer to
+<a href="https://f5.com/nginx">f5.com/nginx</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+root@kubernetes:~/cluster#
+
 
 4. Create a LoadBalancer Service
 
