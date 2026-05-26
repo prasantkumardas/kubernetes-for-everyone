@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-frontend-pod
+  namespace: my-namespace   
+  labels:
+    app: myapp
+    tier: frontend
+spec:
+  containers:
+  - name: frontend-container
+    image: nginx:latest
