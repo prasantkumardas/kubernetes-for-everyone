@@ -51,3 +51,16 @@ Creates a ReplicaSet → which ensures the desired number of pods.
 
 Provides auto‑healing and auto‑scaling.
 
+###Problem in Kubernetes ingress controller###
+
+Problem -1 Enterprise LB limitation: Kubernetes doesn’t ship with a full enterprise‑grade load balancer by default. It relies on cloud providers or external projects.
+
+Problem -2 Cloud cost issue: In AWS (EKS), Azure (AKS), or GCP (GKE), every Service of type LoadBalancer spins up a cloud LB. That means extra cost per service.
+
+
+✅ Kubernetes Solution: Ingress
+Ingress resource: User to Defines HTTP/HTTPS routing rules (host/path based).
+
+Ingress controller: Actual implementation that enforces those rules. Kubernetes itself doesn’t provide one — you install a controller.
+
+Nginx Ingress: The most popula
