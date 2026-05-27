@@ -1,0 +1,53 @@
+Problems with Docker (Standalone)
+Single‑host limitation: Containers run on one host; if the host fails, everything dies.
+
+No auto‑healing: If a container crashes, Docker won’t restart it automatically.
+
+No auto‑scaling: You can’t scale containers up/down based on load.
+
+No built‑in load balancing: Docker bridge networking is basic; no service discovery or LB.
+
+Limited enterprise features: No firewall, API gateway, or governance features out of the box.
+
+✅ How Kubernetes Solves These
+Clustered architecture: Multiple nodes managed together; workloads distributed automatically.
+
+Auto‑healing: Pods are restarted if they fail; deployments ensure desired state.
+
+Auto‑scaling: Horizontal Pod Autoscaler (HPA) scales pods based on CPU/memory/load.
+
+Load balancing: kube‑proxy and Services provide stable IPs, DNS, and traffic distribution.
+
+Enterprise support: Integrates with firewalls, API gateways, RBAC, and cloud providers.
+
+🏗 Kubernetes Architecture
+Control Plane
+API Server: Entry point; exposes Kubernetes to external clients.
+
+ETCD: Key/value store for cluster state.
+
+Scheduler: Decides which node runs each pod.
+
+Controller Manager: Ensures desired state (replicas, jobs, endpoints).
+
+Cloud Controller Manager: Integrates with cloud providers (EKS, AKS, GKE).
+
+Data Plane (Worker Nodes)
+Kubelet: Ensures pods are running on the node.
+
+Container Runtime: Runs containers (containerd, CRI‑O).
+
+Kube‑proxy: Provides networking, IP allocation, and load balancing.
+
+📦 Pods vs Containers
+In Docker, the smallest unit is a container.
+
+In Kubernetes, the smallest unit is a pod (which can wrap one or more containers).
+
+📑 Deployments
+Deployment: Abstraction for managing pods.
+
+Creates a ReplicaSet → which ensures the desired number of pods.
+
+Provides auto‑healing and auto‑scaling.
+
