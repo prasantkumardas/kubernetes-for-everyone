@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spendwise-fo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spendwise-app
+  template:
+    metadata:
+      labels:
+        app: spendwise-app
+    spec:
+      containers:
+        - name: spendwise-app
+          image: kavindudocker/spendwise-app:latest
+          ports:
+            - containerPort: 80

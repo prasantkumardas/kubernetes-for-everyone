@@ -1,0 +1,46 @@
+.request-form {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 40px;
+    position: relative;
+}
+
+.request-form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: #320440;
+
+}
+
+.problem-field {
+    height: 150px;
+    resize: vertical;
+}
+
+.request-form-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.request-form-side-info {
+    font-size: small;
+    font-style: italic;
+    color: #32393e;
+    width: 70%;
+}

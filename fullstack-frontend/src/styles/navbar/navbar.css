@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    justify-content: right;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 5vw;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    color: transparent; /* Set the text color to transparent */
+    background: linear-gradient(to left, #320440, #7d0a0a);
+    -webkit-background-clip: text; /* For webkit browsers */
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item:hover {
+    color: transparent;
+    background: linear-gradient(to left, #FB8B24, #7d0a0a);
+    -webkit-background-clip: text;
+}
+
+.ni-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ni-small span {
+    font-size: 2.4vw;
+}

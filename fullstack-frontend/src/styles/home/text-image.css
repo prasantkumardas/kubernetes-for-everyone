@@ -1,0 +1,71 @@
+.home-li-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 3%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.11);
+    border-radius: 40px;
+
+}
+
+.home-li-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.hl-tc-small {
+    width: 90%;
+}
+
+.home-li-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2rem;
+    color: transparent; /* Set the text color to transparent */
+    background: linear-gradient(to right, #320440, #7d0a0a);
+    -webkit-background-clip: text; /* For webkit browsers */
+    background-clip: text; /* For other browsers that support it */
+    text-align: center;
+}
+
+.home-li-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hl-c-small {
+    flex-direction: column;
+}
+
+.home-li {
+  width: 35%;
+  border-radius: 5%;
+  margin-left: 5%;
+}
+
+.hl-small {
+    width: 80%;
+}
+
+.home-li-description {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #320440;
+  width: 80%;
+  padding: 3% 2%;
+    line-height: 1.5;
+  margin-bottom: 4%;
+  text-align: center;
+  margin-left: 5%;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2), 0 -8px 6px -6px rgba(0, 0, 0, 0.2);
+}
+
+

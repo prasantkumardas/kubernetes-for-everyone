@@ -1,0 +1,121 @@
+.home-header {
+    position: relative;
+    margin: 10vh auto;
+    width: 70%;
+    height: 70vh;
+    /* tl tr br bl */
+    border-radius: 30px 50px 0 150px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 1s;
+}
+
+.home-header-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-header:hover {
+    box-shadow: 0 0 20px rgb(50, 4, 64, 0.2); /* Change shadow on hover */
+    transform: scale(1.02); /* Slightly scale up the element on hover */
+}
+
+
+.home-header-nav {
+    position: absolute;
+    top: 4%;
+    right: 8%;
+
+}
+
+.home-header-content {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.home-header-content-left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+  align-items: center;
+}
+
+.home-header-content-right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-logo {
+  transform: rotate(-8deg);
+    width: clamp(10vh, 27vw, 45vh);
+  margin-top: 5vh;
+}
+
+.home-slogan {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 5vh;
+  color: #320440;
+  text-align: center;
+  margin-top: 2vh;
+  margin-left: 15%;
+}
+
+.hs-small {
+    font-size: 5vw;
+}
+
+.home-header-side-text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size:  clamp(14px, 1.4vw, 20px);
+    line-height: 3vh;
+    text-align: center;
+    color: #320440;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+.hh-st-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size:  clamp(16px, 1.4vw, 20px);
+    line-height: 2.5vh;
+    text-align: center;
+    color: #320440;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.small-text {
+  font-size: 1.2vw;
+  font-weight: 400;
+}
+
+.home-base {
+    margin-top: 5vh;
+  height: 60vh;
+    width: 40vw;
+  border-radius: 50px;
+}
+
+.hb-small {
+    height: 30vh;
+    width: 40vw;
+}
