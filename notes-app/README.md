@@ -5,7 +5,7 @@ Simple Node.js application with unit tests to show how to automate tests using H
 
 ## Install
 ```
-git clone https://github.com/pavanbelagatti/notes-app-cicd.git 
+git clone (https://github.com/prasantkumardas/kubernetes-for-everyone/tree/main/notes-app)
 ```
 ```
 cd notes-app-cicd
@@ -18,10 +18,14 @@ npm install
 ```
 node app.js
 ```
-Visit http://localhost:4000 in your browser
+Visit http://localhost:3000 in your browser
 
 ## Test
 To run tests
 ```
 npm test
 ```
+
+If you are using Kubernetes in cloud you can access using external IP.
+
+
