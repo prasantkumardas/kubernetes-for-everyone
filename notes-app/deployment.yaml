@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: notes-app-deployment
-        image: pavansa/notes-app
+        image: prasantdas123/notes-app:latest
         resources:
           requests:
             cpu: "100m"
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 4000

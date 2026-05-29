@@ -13,8 +13,8 @@ RUN npm install
 # Copy all files to the container
 COPY . .
 
-# Expose port 3000
-EXPOSE 3000
+# Expose port 4000
+EXPOSE 4000
 
 # Start the application
 CMD [ "npm", "start" ]
