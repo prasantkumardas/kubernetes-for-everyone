@@ -5,7 +5,11 @@ Simple Node.js application with unit tests to show how to automate tests using H
 
 ## Install
 ```
+<<<<<<< HEAD
 git clone https://github.com/prasantkumardas/kubernetes-for-everyone/tree/main/notes-app 
+=======
+git clone (https://github.com/prasantkumardas/kubernetes-for-everyone/tree/main/notes-app)
+>>>>>>> d48b39fc7b6fdfa8bbdf3ef8e084c53c5feb202f
 ```
 ```
 cd notes-app-cicd
@@ -25,7 +29,14 @@ To run tests
 ```
 npm test
 ```
+<<<<<<< HEAD
 If you are using Kubernetes in cloud you can access using external IP.
 
 
 ![alt text](image.png)
+=======
+
+If you are using Kubernetes in cloud you can access using external IP.
+
+
+>>>>>>> d48b39fc7b6fdfa8bbdf3ef8e084c53c5feb202f
