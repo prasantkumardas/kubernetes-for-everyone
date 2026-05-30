@@ -23,15 +23,38 @@ spec:
             - name: POSTGRES_USER
               value: postgres
             - name: POSTGRES_PASSWORD
-              value: '111111'
+              value: "111111"
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
           volumeMounts:
             - name: pgdata
               mountPath: /var/lib/postgresql/data
+          readinessProbe:
+            tcpSocket:
+              port: 5432
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          livenessProbe:
+            tcpSocket:
+              port: 5432
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "250m"
       volumes:
         - name: pgdata
           persistentVolumeClaim:
-            claimName: pgdata  # Ensure this matches the PVC name
+            claimName: pgdata
+
 ---
+# -------------------------
+# Postgres Service
+# -------------------------
 apiVersion: v1
 kind: Service
 metadata:
@@ -43,4 +66,4 @@ spec:
     - protocol: TCP
       port: 5432
       targetPort: 5432
-  clusterIP: None
+  clusterIP: None   # headless service for stateful DB
