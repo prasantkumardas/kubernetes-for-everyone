@@ -28,6 +28,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/private/**").authenticated()
                 )
                 .cors(withDefaults())
+                .csrf(csrf -> csrf.disable())
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(withDefaults())
                 )

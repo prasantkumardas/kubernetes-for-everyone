@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spendwise-fo
-          image: prasantdas123/spendwise-app:jun01-v1
+          image: prasantdas123/spendwise-app:jun01-v2
           ports:
             - containerPort: 80
           env:

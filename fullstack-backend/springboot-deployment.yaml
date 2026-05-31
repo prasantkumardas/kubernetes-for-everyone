@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spendwise-bo
-          image: prasantdas123/spendwise-app-backend:may29-v1
+          image: prasantdas123/spendwise-app-backend:jun01-v1
           ports:
             - containerPort: 8080
           env:
