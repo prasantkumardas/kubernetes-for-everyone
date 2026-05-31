@@ -24,6 +24,12 @@ spec:
               value: postgres
             - name: SPRING_DATASOURCE_PASSWORD
               value: '111111'
+            # Auth0 JWT validation – must match the values in application.properties.
+            # Override here so the same image works across environments.
+            - name: OKTA_OAUTH2_ISSUER
+              value: "https://dev-c5ls7veng3ljfc5g.us.auth0.com/"
+            - name: OKTA_OAUTH2_AUDIENCE
+              value: "https://spendwise-backend-api"
 ---
 apiVersion: v1
 kind: Service

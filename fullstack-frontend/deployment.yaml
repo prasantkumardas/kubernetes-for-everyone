@@ -14,6 +14,21 @@ spec:
     spec:
       containers:
         - name: spendwise-fo
-          image: prasantdas123/spendwise-app:may29-v1
+          image: prasantdas123/spendwise-app:jun01-v1
           ports:
             - containerPort: 80
+          env:
+            - name: VITE_AUTH0_DOMAIN
+              value: "dev-c5ls7veng3ljfc5g.us.auth0.com"
+            - name: VITE_AUTH0_AUDIENCE
+              value: "https://spendwise-backend-api"
+            - name: VITE_AUTH0_FO_CLIENT_ID
+              value: "uqUxxBkX0zTbqMdcZNeFJnf72Ds6YI0L"
+            - name: VITE_AUTH0_CLIENT_ID
+              value: "uqUxxBkX0zTbqMdcZNeFJnf72Ds6YI0L"
+            - name: VITE_AUTH0_CLIENT_SECRET
+              value: "kB98Ev4O7ST1PsRU1TGdVMFcXDFXdrAnA-wYcy3LPHUCsrPa70FCAoq-r0TlUton"
+            - name: VITE_STRIPE_PUBLIC_KEY
+              value: "pk_test_51Td5fpB6qil4AjdcWVSP6PkA3EIgOCqcdNbwMufdsqYGN5x47A4nyV7g0mvRPzxbUZcBo6tsT43ypNmNNg9ScqND00KbkZLjU4"
+            - name: VITE_LOCAL_API_URL
+              value: ""   # TODO: paste http://<EXTERNAL-IP of spendwise-bo-service>:8080
