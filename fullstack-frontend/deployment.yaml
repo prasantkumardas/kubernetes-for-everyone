@@ -31,4 +31,4 @@ spec:
             - name: VITE_STRIPE_PUBLIC_KEY
               value: "pk_test_51Td5fpB6qil4AjdcWVSP6PkA3EIgOCqcdNbwMufdsqYGN5x47A4nyV7g0mvRPzxbUZcBo6tsT43ypNmNNg9ScqND00KbkZLjU4"
             - name: VITE_LOCAL_API_URL
-              value: ""   # TODO: paste http://<EXTERNAL-IP of spendwise-bo-service>:8080
+              value: "http://172.168.76.236:8080"
